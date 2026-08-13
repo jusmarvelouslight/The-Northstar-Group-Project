@@ -1,16 +1,12 @@
-| Date       | Team Member | Task                                          | Notes                                              |
-|------------|-------------|-----------------------------------------------|----------------------------------------------------|
-| Day 1      | Alex        | Classify + Route                             | Collaborated to define the overall classification strategy and routing logic. |
-|            | Jordan      | Order Status Branch                          | Developed the component to handle order status inquiries, adding necessary guards. |
-|            | Sam         | Return + Stock Branches                      | Focused on designing the return request and stock availability flow, ensuring detail accuracy. |
-|            | Riley       | Out-of-Scope + Save Steps + GitHub Push + Documentation | Finalized the out-of-scope escalation process and led documentation efforts for clarity. |
-| Day 2      | Alex        | Build Classifier and Router                  | Implemented the classifier logic, testing its efficiency with sample inputs. |
-|            | Jordan      | Develop the Order Status Logic                | Completed the API call for fetching order status based on provided order ID. |
-|            | Sam         | Finalize Return & Stock Branch Logic         | Built mock responses for return requests and stock checks per product. |
-|            | Riley       | GitHub Repository Setup                      | Structured the GitHub repo and outlined guidelines for future contributions. |
-| Day 3      | Alex        | Implement Normalization for Classifier Output | Updated router to use lowerAscii() for consistent routing decisions. |
-|            | Jordan      | Order ID Guard Implementation                 | Added the check_order_id_present function to prompt user input for missing order IDs. |
-|            | Sam         | Stock No-Product Fallback Fix                | Resolved issues with the fallback mechanism for stock queries, ensuring accurate replies. |
-|            | Riley       | Document Component Functions                  | Drafted documentation to detail function use and input requirements. |
-| Day 4      | Team        | Group Review and Bug Fixes                   | Conducted a thorough review session; identified and resolved the stock fallback and normalization bugs. |
-| Day 5      | Team        | Final Testing, Documentation, GitHub Push     | Wrapped up testing, finalized documentation, and successfully pushed to GitHub for submission. |
+| Date       | Team Member | Task                                 | Notes                                                                                     |
+|------------|-------------|--------------------------------------|-------------------------------------------------------------------------------------------|
+| Day 1      | Alex        | Classify + Route                     | Jumpstarted the classification logic. Planned routing structure for all branches.        |
+| Day 1      | Jordan      | Order Status Branch                  | Focused on handling order status queries. Initiated development of the order ID guard.   |
+| Day 1      | Sam         | Return + Stock Branches              | Took responsibility for building return policies and stock checks, outlined inventory.   |
+| Day 1      | Riley       | Out-of-Scope + Save Steps + Git Push | Established out-of-scope logic flow and designed saving methods. Prepared for GitHub push.|
+| Day 2      | Alex, Sam   | Build Components                     | Continued developing their respective components, ensuring cohesive integration.          |
+| Day 3      | Jordan      | Implement Order ID Guard             | Added robust checks to ensure proper order ID handling, preventing errors.                |
+| Day 4      | Team        | Group Review & Bug Fixes             | Fixed the stock no-product fallback issue, updated the classifier for normalized outputs.  |
+| Day 4      | Alex        | Normalization Fix                    | Implemented a lower casing function on classifier outputs for consistency.                |
+| Day 4      | Sam         | Inventory Fix                        | Corrected the error in the inventory agent response for the stock no-product fallback.    |
+| Day 5      | Team        | Final Testing, Documentation         | Conducted thorough testing across all branches, finalized documentation, and pushed to GitHub. |

@@ -1,21 +1,20 @@
-# Handoff Documentation
+# Handoff Documentation for Northstar Support Chatbot
 
 ## What Works
-- All four branches of the chatbot run end-to-end without issues, providing on-brand replies for every inquiry path.
-- The inventory includes a comprehensive selection of products, complete with size-level details and estimated restock dates.
-- For stock queries, a no-product fallback mechanism is in place to handle cases where a product is temporarily unavailable.
-- A dedicated friendly prompt addresses situations when an order ID is missing, enhancing user experience.
-- The classifier output is normalized to lowercase before routing to ensure consistency and accuracy.
-- The final replies are consistently saved to `state.final_reply` across all branches of the chatbot.
+- All four branches run end-to-end, delivering on-brand replies on every path.
+- Full mock inventory, complete with size-level detail and estimated restock dates.
+- Dedicated friendly prompt handles cases where the order ID isn't provided.
+- Classifier output is normalized to lowercase before routing to ensure consistency.
+- The final reply is reliably saved to `state.final_reply` across all branches.
 
-## What Is Still Rough
-- The mock data used in the agent backstories is hardcoded, necessitating real API or database integration for production purposes.
-- There is no functionality for conversation memory across interaction sessions.
-- Authentication and rate-limiting features have not yet been implemented.
-- The chatbot currently writes replies solely to state and does not send them to external communication channels such as emails or chat widgets.
+## What is Still Rough
+- The mock data is hardcoded in agent backstories; real API or database integration is essential for production readiness.
+- Lacks conversation memory; no information persists beyond the current session.
+- There is no authentication or rate limiting in place.
+- The chatbot interface only writes replies to `state` and does not yet send them to channels like email or chat applications.
 
-## Important Information for Future Developers
-- The classifier agent drives all routing functionality; testing this component first is crucial if unexpected behavior arises.
-- To update mock data, modifications can be made by editing the agent backstories directly within CrewAI Studio.
-- The platform's default LLM is utilized throughout; be sure to re-test the classifier if the organization’s model changes.
-- Ensure that the kickoff input field names are entered exactly as specified for the chatbot to function correctly.
+## Important Notes
+- The classifier agent drives all routing; test it thoroughly first if the chatbot's behavior seems incorrect.
+- To update mock data, simply edit the agent backstories directly in CrewAI Studio.
+- The platform default LLM is utilized throughout the process, so be sure to retest the classifier if there are changes to the organizational model.
+- Be sure to keep input field names the same as typed for accuracy.

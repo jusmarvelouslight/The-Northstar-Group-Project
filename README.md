@@ -12,8 +12,8 @@ The chatbot classifies incoming customer messages into four categories:
 ## How to Run It
 To initiate the chatbot, provide the following kickoff inputs:
 - **customer_message**: Required
-- **order_id**: Optional
-- **product_name**: Optional
+- **order_id**: Required
+- **product_name**: Required
 
 The chatbot will output responses in the state field named `final_reply`.
 

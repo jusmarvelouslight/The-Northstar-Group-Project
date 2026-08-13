@@ -1,12 +1,16 @@
-| Date       | Team Member | Task                                           | Notes                                      |
-|------------|-------------|------------------------------------------------|--------------------------------------------|
-| 2023-10-01 | Alex        | Classify + route                              | Planned classifier logic and routing paths |
-| 2023-10-01 | Jordan      | Order status branch                           | Focused on handling order ID with "check_order_id_present" logic |
-| 2023-10-01 | Sam         | Return + stock branches                       | Outlined structure for return policy and stock queries |
-| 2023-10-01 | Riley       | Out-of-scope + save steps + GitHub push + documentation | Managed GitHub setup for version control |
-| 2023-10-02 | Alex        | Classification logic implementation           | Implemented the classifier and tested functionality |
-| 2023-10-02 | Jordan      | Order status branch development               | Developed logic for checking order status and retrieving correct messages |
-| 2023-10-02 | Sam         | Building return request and stock branches    | Created stock availability checks with at-length mock data |
-| 2023-10-03 | Riley       | Final touches on out-of-scope handling       | Added friendly prompts for out-of-scope inquiries |
-| 2023-10-04 | Team        | Group review and bug fixes                    | Fixed stock no-product fallback, added missing order ID guard, normalized classifier output |
-| 2023-10-05 | Team        | Testing, documentation, GitHub push          | Conducted final tests on all branches, completed documentation, confirmed GitHub integration 
+| Date       | Team Member | Task                                          | Notes                                              |
+|------------|-------------|-----------------------------------------------|----------------------------------------------------|
+| Day 1      | Alex        | Classify + Route                             | Collaborated to define the overall classification strategy and routing logic. |
+|            | Jordan      | Order Status Branch                          | Developed the component to handle order status inquiries, adding necessary guards. |
+|            | Sam         | Return + Stock Branches                      | Focused on designing the return request and stock availability flow, ensuring detail accuracy. |
+|            | Riley       | Out-of-Scope + Save Steps + GitHub Push + Documentation | Finalized the out-of-scope escalation process and led documentation efforts for clarity. |
+| Day 2      | Alex        | Build Classifier and Router                  | Implemented the classifier logic, testing its efficiency with sample inputs. |
+|            | Jordan      | Develop the Order Status Logic                | Completed the API call for fetching order status based on provided order ID. |
+|            | Sam         | Finalize Return & Stock Branch Logic         | Built mock responses for return requests and stock checks per product. |
+|            | Riley       | GitHub Repository Setup                      | Structured the GitHub repo and outlined guidelines for future contributions. |
+| Day 3      | Alex        | Implement Normalization for Classifier Output | Updated router to use lowerAscii() for consistent routing decisions. |
+|            | Jordan      | Order ID Guard Implementation                 | Added the check_order_id_present function to prompt user input for missing order IDs. |
+|            | Sam         | Stock No-Product Fallback Fix                | Resolved issues with the fallback mechanism for stock queries, ensuring accurate replies. |
+|            | Riley       | Document Component Functions                  | Drafted documentation to detail function use and input requirements. |
+| Day 4      | Team        | Group Review and Bug Fixes                   | Conducted a thorough review session; identified and resolved the stock fallback and normalization bugs. |
+| Day 5      | Team        | Final Testing, Documentation, GitHub Push     | Wrapped up testing, finalized documentation, and successfully pushed to GitHub for submission. |

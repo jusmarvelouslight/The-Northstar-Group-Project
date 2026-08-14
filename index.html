@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice:wght@400&family=Lora:wght@400;600;700;italic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Northstar Clothing Co.</title>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">Complimentary shipping on selected orders</div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="brand-logo">NORTHSTAR / CLOTHING CO.</div>
+        <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#new-arrivals">New Arrivals</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button class="search-button" aria-label="Search">⌕</button>
+            <button class="cart-button" aria-label="View cart">
+                ♡ <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Panel -->
+    <div class="search-panel">
+        <label for="search-input">Search Northstar</label>
+        <input type="text" id="search-input" placeholder="Search clothing, collections...">
+        <button class="close-search" aria-label="Close search panel">×</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Fashion editorial" loading="lazy">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="eyebrow">THE NORTHSTAR EDIT</div>
+            <h1>Dress for <em>your direction.</em></h1>
+            <p>Confidence and elegance come together in each carefully curated piece.</p>
+            <a href="#shop" class="cta-button">Explore Collection</a>
+            <div class="scroll-indicator">⬇</div>
+        </div>
+    </section>
+
+    <!-- Brand Introduction Section -->
+    <section id="about" class="brand-intro">
+        <div class="section-eyebrow">WELCOME TO NORTHSTAR</div>
+        <h2>Style that knows <span>where it's going.</span></h2>
+        <p>At Northstar, we believe in crafting clothing that inspires confidence.</p>
+        <p>Our designs are timeless, made with quality and care to last a lifetime.</p>
+        <a href="#" class="text-link">Discover Northstar →</a>
+        <div class="decorative-circle">EST. NORTHSTAR</div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section">
+        <div class="section-eyebrow">SHOP BY CATEGORY</div>
+        <h2>Find your <em>essential.</em></h2>
+        <p>Explore our curated collection across various categories.</p>
+        <div class="category-grid">
+            <div class="category-card">
+                <span class="category-number">01</span>
+                <h3>Women</h3>
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg" alt="Women's clothing" loading="lazy">
+                <a href="#" class="discover-link">Discover collection →</a>
+            </div>
+            <div class="category-card">
+                <span class="category-number">02</span>
+                <h3>Men</h3>
+                <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg" alt="Men's clothing" loading="lazy">
+                <a href="#" class="discover-link">Discover collection →</a>
+            </div>
+            <div class="category-card">
+                <span class="category-number">03</span>
+                <h3>Essentials</h3>
+                <img src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg" alt="Essentials" loading="lazy">
+                <a href="#" class="discover-link">Discover collection →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <div class="section-eyebrow">NORTHSTAR COLLECTION</div>
+        <h2>Pieces worth <em>keeping.</em></h2>
+        <p>Browse our latest offerings and find something special.</p>
+        <div class="product-grid">
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="badge new">NEW</span>
+                    <img src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg" alt="The Essential Linen Set" loading="lazy">
+                    <button class="quick-add" data-product="Essential Linen Set" data-price="89.00">Quick Add</button>
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Women</span>
+                    <h3>The Essential Linen Set</h3>
+                    <span class="product-price">$89.00</span>
+                    <button class="add-to-bag" data-product="Essential Linen Set" data-price="89.00">Add to Bag</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="badge bestseller">BESTSELLER</span>
+                    <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" alt="The Signature Overshirt" loading="lazy">
+                    <button class="quick-add" data-product="Signature Overshirt" data-price="105.00">Quick Add</button>
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Men</span>
+                    <h3>The Signature Overshirt</h3>
+                    <span class="product-price">$105.00</span>
+                    <button class="add-to-bag" data-product="Signature Overshirt" data-price="105.00">Add to Bag</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/1755428/pexels-photo-1755428.jpeg" alt="The Silk Evening Dress" loading="lazy">
+                    <button class="quick-add" data-product="Silk Evening Dress" data-price="149.00">Quick Add</button>
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Women</span>
+                    <h3>The Silk Evening Dress</h3>
+                    <span class="product-price">$149.00</span>
+                    <button class="add-to-bag" data-product="Silk Evening Dress" data-price="149.00">Add to Bag</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/5698851/pexels-photo-5698851.jpeg" alt="The Classic Cotton Tee" loading="lazy">
+                    <button class="quick-add" data-product="Classic Cotton Tee" data-price="39.00">Quick Add</button>
+                </div>
+                <div class="product-details">
+                    <span class="product-category">Essentials</span>
+                    <h3>The Classic Cotton Tee</h3>
+                    <span class="product-price">$39.00</span>
+                    <button class="add-to-bag" data-product="Classic Cotton Tee" data-price="39.00">Add to Bag</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Editorial Banner Section -->
+    <section id="new-arrivals" class="editorial-banner">
+        <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?w=1800" alt="New arrivals editorial" loading="lazy">
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support-section">
+        <div class="section-eyebrow">CUSTOMER SUPPORT</div>
+        <h2>We're here to <em>help.</em></h2>
+        <p>If you have any questions or need assistance, we're just a click away.</p>
+        <div class="support-grid">
+            <div class="support-card">
+                <span class="icon">📦</span>
+                <h3>Track My Order</h3>
+                <p>Stay updated with your order status and tracking information.</p>
+            </div>
+            <div class="support-card">
+                <span class="icon">🔄</span>
+                <h3>Returns & Exchanges</h3>
+                <p>We offer 30-day returns for your satisfaction.</p>
+            </div>
+            <div class="support-card">
+                <span class="icon">🏷️</span>
+                <h3>Stock Questions</h3>
+                <p>Need help with product availability? We're here for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="section-eyebrow">STAY IN THE LOOP</div>
+        <h2>Get early access to new <span>arrivals.</span></h2>
+        <p>Subscribe to our newsletter for exclusive updates and offers.</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="brand-column">
+                <div class="footer-logo">NORTHSTAR</div>
+                <p class="tagline">Dress for your direction.</p>
+                <p>© 2024 Northstar Clothing Co. All rights reserved.</p>
+            </div>
+            <div class="navigation-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#new-arrivals">New Arrivals</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+            <div class="info-column">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Northstar Clothing Co. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

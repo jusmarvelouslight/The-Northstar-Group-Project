@@ -37,6 +37,10 @@ PROJECT TASK BOARD
 |     T20     |     Run 1 full   timed rehearsal (≤10 min target), every teammate covers their section, record   for review                     |     All Members               |     P1            |     Saturday             |     Entire team knows the demo flow and can explain their   contribution                                             |     Not Started    |     1 hr           |
 |     T21     |     Confirm against   rubric line-by-line: charter signed, 12+ tasks tagged, board permissions   public                         |     Samuel                    |     P0            |     Saturday 11:30 AM    |     All required deliverables verified against the assessment   requirements                                         |     Not Started    |     30 min         |
 |     T22     |     Submit final   project                                                                                                      |     Marrion                   |     P0            |     Saturday 11:59 AM    |     Required deliverables successfully submitted before   deadline                                                   |     Not Started    |                    |
+
+
+
+
 DAILY BOARD
 WEDNESDAY — PLAN & DESIGN
 Must Finish

@@ -23,6 +23,8 @@ By the final deadline, the team will deliver:
 6.	A clear presentation/demo showing the problem, solution, workflow and results.
 ________________________________________
 3. Team Roles
+   
+   
 |      Member     	|      Primary Role                        	|      Key Responsibility                                                       	|
 |-----------------	|------------------------------------------	|-------------------------------------------------------------------------------	|
 |     Member 1    	|     Project Lead / Scrum Lead            	|     Coordination, deadlines, task tracking, final integration                 	|
@@ -30,6 +32,8 @@ ________________________________________
 |     Member 3    	|     Technical Developer                  	|     Chatbot implementation, logic and integrations                            	|
 |     Member 4    	|     QA & Testing Lead                    	|     Test cases, bug identification, validation and evidence                   	|
 |     Member 5    	|     Documentation & Presentation Lead    	|     Go-live note, project evidence, presentation and final   documentation    	|
+
+
 Although every member has a primary role, everyone is expected to contribute to the actual project work. No member should only observe or wait for others to complete the project.
 ________________________________________
 4. Rules of Communication

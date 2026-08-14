@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700;italic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice:wght@400&display=swap');
+
+:root {
+    --font-display: 'Lora', Georgia, serif;
+    --font-body: 'Alice', Georgia, serif;
+    --burgundy: #7A1F3D;
+    --burgundy-dark: #55152B;
+    --burgundy-light: #9A4560;
+    --baby-blue: #A9D6E5;
+    --baby-blue-light: #DCEFF5;
+    --baby-blue-dark: #6FAFC4;
+    --almond-beige: #F3E8D5;
+    --almond-light: #FAF5EC;
+    --almond-dark: #DCC8A9;
+    --white: #FFFFFF;
+    --cream-white: #FFFCF7;
+    --black: #191517;
+    --soft-black: #30292C;
+    --gray: #777174;
+    --light-gray: #E9E4DF;
+    --border: #DDD3CB;
+    --gold-shimmer: #C9A96E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--black);
+    line-height: 1.6;
+    background-color: var(--cream-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--burgundy);
+}
+
+.accessibility {
+    outline: none;
+}
+
+.announcement-bar {
+    background: linear-gradient(90deg, var(--burgundy), var(--burgundy-light));
+    animation: gradient 10s ease infinite;
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+}
+
+@keyframes gradient {
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--burgundy);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-family: var(--font-display);
+    color: var(--burgundy);
+    text-shadow: 1px 1px var(--gold-shimmer);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold-shimmer);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.search-panel {
+    background-color: var(--cream-white);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-label {
+    font-family: var(--font-display);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.hero {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+button {
+    font-family: var(--font-display);
+    background: var(--burgundy);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: var(--gold-shimmer);
+    transform: scale(1.05);
+}
+
+.brand-intro {
+    padding: 2rem;
+    background: var(--baby-blue-light);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.intro-decoration {
+    font-size: 1.5rem;
+    color: var(--burgundy);
+}
+
+.section-heading {
+    background-color: transparent;
+    color: var(--baby-blue-dark);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-section {
+    padding: 2rem;
+}
+
+.product-card {
+    position: relative;
+    background: var(--almond-beige);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom, var(--burgundy), var(--almond-beige));
+}
+
+.product-badge {
+    background-color: var(--burgundy);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.quick-add {
+    background: var(--baby-blue);
+    color: var(--black);
+    border: none;
+    padding: 1rem;
+    transition: background 0.3s;
+}
+
+.quick-add:hover {
+    background: var(--gold-shimmer);
+}
+
+.product-details {
+    padding: 1rem;
+    font-family: var(--font-body);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        margin: 0.5rem;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}

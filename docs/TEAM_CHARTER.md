@@ -205,12 +205,17 @@ We agree to:
 ________________________________________
 13. Signatures
 By signing below, each member confirms that they understand and agree to the team's communication rules, responsibilities, deadlines and conflict-resolution process.
-Member	Name	Role	Signature	Date
-1______Marrion Branham___________	Project Lead	__________________	_____Aug 14th_____
-2	__________________	Product/Conversation Designer	__________________	__________
-3	__________________	Technical Developer	__________________	__________
-4	__________________	QA & Testing Lead	__________________	__________
-5	__________________	Documentation/Presentation Lead	__________________	__________
+
+
+|      Member     |      Name                 |      Role                              |      Signature            |      Date         |
+|-----------------|---------------------------|----------------------------------------|---------------------------|-------------------|
+|     1           |     __________________    |     Project Lead                       |     __________________    |     __________    |
+|     2           |     __________________    |     Product/Conversation Designer      |     __________________    |     __________    |
+|     3           |     __________________    |     Technical Developer                |     __________________    |     __________    |
+|     4           |     __________________    |     QA & Testing Lead                  |     __________________    |     __________    |
+|     5           |     __________________    |     Documentation/Presentation Lead    |     __________________    |     __________    |
+
+
 Team Approval: ______________________________
 Date: ______________________________
 Final Sprint Deadline: Saturday, 11:59 AM

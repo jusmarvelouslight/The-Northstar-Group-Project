@@ -1,12 +1,11 @@
-| Date       | Team Member | Task                                 | Notes                                                                                     |
-|------------|-------------|--------------------------------------|-------------------------------------------------------------------------------------------|
-| Day 1      | Alex        | Classify + Route                     | Jumpstarted the classification logic. Planned routing structure for all branches.        |
-| Day 1      | Jordan      | Order Status Branch                  | Focused on handling order status queries. Initiated development of the order ID guard.   |
-| Day 1      | Sam         | Return + Stock Branches              | Took responsibility for building return policies and stock checks, outlined inventory.   |
-| Day 1      | Riley       | Out-of-Scope + Save Steps + Git Push | Established out-of-scope logic flow and designed saving methods. Prepared for GitHub push.|
-| Day 2      | Alex, Sam   | Build Components                     | Continued developing their respective components, ensuring cohesive integration.          |
-| Day 3      | Jordan      | Implement Order ID Guard             | Added robust checks to ensure proper order ID handling, preventing errors.                |
-| Day 4      | Team        | Group Review & Bug Fixes             | Fixed the stock no-product fallback issue, updated the classifier for normalized outputs.  |
-| Day 4      | Alex        | Normalization Fix                    | Implemented a lower casing function on classifier outputs for consistency.                |
-| Day 4      | Sam         | Inventory Fix                        | Corrected the error in the inventory agent response for the stock no-product fallback.    |
-| Day 5      | Team        | Final Testing, Documentation         | Conducted thorough testing across all branches, finalized documentation, and pushed to GitHub. |
+| Date       | Team Member | Task                                      | Notes                                                                                                   |
+|------------|-------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| 2023-10-01 | Alex        | Classify + route                          | Collaborated on defining the classification criteria and routing logic.                                 |
+| 2023-10-01 | Jordan      | Order status branch                       | Focused on implementing the order status checks and integrating prompt responses for missing data.      |
+| 2023-10-01 | Sam         | Return + stock branches                   | Worked on formulating responses for return requests and stock inquiries, ensuring accurate mock data.   |
+| 2023-10-01 | Riley       | Out-of-scope + save steps + documentation | Compiled documentation requirements and structured responses for out-of-scope requests.                 |
+| 2023-10-02 | Alex        | Bug fixes                                 | Adjusted the classifier's configuration to ensure lowercasing for consistency in routing logic.         |
+| 2023-10-02 | Sam         | Inventory agent backstory fix             | Refined the fallback to ensure missing products in stock inquiries trigger the right responses.         |
+| 2023-10-02 | Jordan      | Order ID guard enhancements                | Added checks for empty order IDs, creating dedicated prompts for user interaction.                      |
+| 2023-10-04 | Team Review | Group review and bug fixes                | Conducted thorough testing on all branches; identified and resolved issues with the stock no-product fallback. |
+| 2023-10-05 | Team        | Final testing, documentation, GitHub push | Completed synchronization of changes, finalized documentation, and successfully pushed to GitHub for submission. |

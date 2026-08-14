@@ -1,33 +1,37 @@
 # Northstar Support Chatbot
 
-The Northstar Support Chatbot is an AI-powered customer support solution designed to classify and auto-reply to the three most common Northstar support queries. Additionally, it smartly escalates queries that fall outside of its designated scope.
+## Overview
+The Northstar Support Chatbot is an AI-powered tool designed to classify and auto-reply to the three most common customer support questions at Northstar, as well as escalate inquiries that fall outside of predefined categories. 
 
-## Functionality Overview
-The chatbot classifies incoming customer messages into four categories:
-1. **order_status** - Handles queries related to order tracking, requiring an order ID.
-2. **return_request** - Manages return requests according to our return policy.
-3. **stock_availability** - Checks product availability, utilizing a full inventory catalog as a fallback.
-4. **out_of_scope** - Escalates any other queries that it cannot address.
+## What It Does
+The chatbot classifies incoming customer messages into the following categories:
+- **Order Status**: Handles queries about order tracking using an optional order ID.
+- **Return Request**: Manages requests for returning items.
+- **Stock Availability**: Informs customers about product availability, with a fallback to check a full catalog.
+- **Out of Scope**: Escalates issues that do not fit into the previous categories.
 
 ## How to Run It
-To initiate the chatbot, provide the following kickoff inputs:
-- **customer_message**: Required
-- **order_id**: Required
-- **product_name**: Required
+Kickoff inputs for the chatbot include:
+- `customer_message` (required)
+- `order_id` (optional)
+- `product_name` (optional)
 
-The chatbot will output responses in the state field named `final_reply`.
+The chatbot processes these inputs, classifies them, and provides responses.
+
+## Where the Output Lives
+The output is saved in the `state.final_reply` field. Each method also outputs relevant information based on the classification and routing.
 
 ## Known Limitations
-- Hardcoded mock data used in agent backstories; integration with a live API or database is needed for production.
-- No conversation memory; each session is treated independently.
-- The classifier output is the single point of failure for routing inquiries.
-- Current implementation lacks authentication and rate limiting.
+- Mock data is hardcoded in agent backstories, which needs to be replaced with real API or database calls for production use.
+- The chatbot lacks conversation memory across sessions.
+- The classifier's output is the single point of failure for proper query routing.
+- There is currently no authentication or rate-limiting in place.
 
-## Swapping in Real Data
-To utilize real-world data, you can swap out the mock data sections in the agent backstories with actual API calls or database queries.
+## How to Swap in Real Data
+To implement real data, replace the agent backstory mock data sections with calls to a live API or database that provides updated information.
 
 ## Tech Stack
-- **CrewAI**
-- **crewai.flow/v1**
-- **CrewAI Studio**
-- **composio GitHub integration**
+- CrewAI
+- crewai.flow/v1
+- CrewAI Studio
+- composio GitHub integration

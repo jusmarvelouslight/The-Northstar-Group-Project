@@ -1,36 +1,42 @@
 # Northstar Support Chatbot
 
-The Northstar Support Chatbot is an AI-powered solution designed to classify and automatically respond to the three most common customer inquiries from Northstar, an online clothing store. It also intelligently escalates messages that fall outside its scope.
+The Northstar Support Chatbot is an AI-powered customer support solution designed to classify incoming customer messages into four main categories, allowing for auto-replies to the three most common support questions at Northstar, along with escalation for out-of-scope queries.
 
-## Overview
-The chatbot operates across four primary branches:
-- **Order Status**: Accesses order details using an order ID guard.
-- **Return Request**: Guides users through the return process.
-- **Stock Availability**: Checks the status of products, with a fallback to the full catalog for queries.
-- **Out of Scope Escalation**: Handles inquiries that the chatbot cannot address.
+## Features
 
-## How to Run It
-To initiate the chatbot, provide the required kickoff input:
-- **customer_message**: The customer's inquiry (required).
-- **order_id**: The customer's order ID (optional).
-- **product_name**: The name of the product in question (optional).
+- **Classification & Auto-Replies**: The chatbot recognizes messages related to order status, return requests, stock availability, and flags any out-of-scope inquiries for human review.
+- **Four Branches**: 
+  - Order Status: Uses order ID for verification.
+  - Return Request: Provides information on return policies.
+  - Stock Availability: Offers a complete catalog fallback for all product inquiries.
+  - Out-of-Scope Escalation: Routes inquiries not addressed by the other branches.
 
-The chatbot's outputs are located at:
-- **state.final_reply**: Where composed replies are saved.
-- **Method Outputs**: Generated alongside the conversation flow.
+## Running the Chatbot
+
+To operate the chatbot, provide the following kickoff inputs:
+- `customer_message` (required): The customer's question or request.
+- `order_id` (optional): The specific order ID if pertaining to order status.
+- `product_name` (optional): The specific product name if querying stock availability.
+
+The output of the chatbot is stored in:
+- `state.final_reply`: This holds the composed reply ready for customer communication.
+- Additionally, method outputs are generated for handling executive functions.
 
 ## Known Limitations
-The following limitations apply:
-- Mock data is hardcoded within the agent backstories and requires real API or database integration for a production environment.
-- There is no memory of conversations across sessions.
-- The classifier output serves as the single point of failure for routing outcomes.
-- Currently, there is no authentication or rate-limiting in place.
 
-## How to Swap in Real Data
-Replace the mock data sections within the agent backstories with calls to genuine APIs or databases for a live implementation.
+1. The mock data used in agent backstories is hardcoded and requires real data source integration for production use.
+2. The chatbot does not maintain conversation memory across different sessions.
+3. The classifier's output is the single point of failure for routing; improvements in this area will enhance reliability.
+4. There is currently no authentication or rate-limiting implemented.
+
+## Swapping In Real Data
+
+To integrate real data instead of mock data:
+- Replace sections of agent backstory mock data with calls to a real API or database to ensure accurate and up-to-date customer service.
 
 ## Tech Stack
-- **CrewAI**
-- **crewai.flow/v1**
-- **CrewAI Studio**
-- **Composio GitHub integration**
+
+- **CrewAI**: The underlying platform for building the chatbot.
+- **crewai.flow/v1**: The version used in implementation.
+- **CrewAI Studio**: The environment for designing and modifying the chatbot flows.
+- **Composio GitHub Integration**: For seamless version control and collaboration.

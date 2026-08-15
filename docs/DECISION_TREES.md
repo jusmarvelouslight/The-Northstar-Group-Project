@@ -20,6 +20,4 @@ These decision trees are the implementation-ready workflow reference for the Nor
 - **Yes** → Eligible for Full Refund → Provide free prepaid return label
 - **No** → Standard Return Closed → May qualify for store credit upon review
 
-## Handoff
 
-Use these flows as the visual reference when implementing the corresponding HTML/JavaScript interactions. The editable PowerPoint source remains in the `docs` folder for team editing.

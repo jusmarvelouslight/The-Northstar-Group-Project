@@ -20,6 +20,6 @@ These decision trees are the implementation-ready workflow reference for the Nor
 - **Yes** → Eligible for Full Refund → Provide free prepaid return label
 - **No** → Standard Return Closed → May qualify for store credit upon review
 
-- 
+  
 
 

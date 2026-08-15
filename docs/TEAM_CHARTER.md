@@ -216,7 +216,7 @@ By signing below, each member confirms that they understand and agree to the tea
 |     5           |     _________Angela Wainaina_________    |   Support logic & workflow design      |     _________A.W_________    |     _____15th August,2026_____    |
 
 
-Team Approval: ______________________________
-Date: ______________________________
+Team Approval: ____________M.B__________________
+Date: _____________15th August, 2026_________________
 Final Sprint Deadline: Saturday, 11:59 PM
 

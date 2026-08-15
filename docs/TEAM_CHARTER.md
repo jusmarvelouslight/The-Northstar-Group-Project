@@ -27,11 +27,11 @@ ________________________________________
    
 |      Member     	|      Primary Role                        	|      Key Responsibility                                                       	|
 |-----------------	|------------------------------------------	|-------------------------------------------------------------------------------	|
-|     Member 1    	|     Project Lead / Scrum Lead            	|     Coordination, deadlines, task tracking, final integration                 	|
-|     Member 2    	|     Product & Conversation Designer      	|     Chatbot questions, responses, user journeys and   conversation logic      	|
-|     Member 3    	|     Technical Developer                  	|     Chatbot implementation, logic and integrations                            	|
-|     Member 4    	|     QA & Testing Lead                    	|     Test cases, bug identification, validation and evidence                   	|
-|     Member 5    	|     Documentation & Presentation Lead    	|     Go-live note, project evidence, presentation and final   documentation    	|
+|     Angie    	|     Scrum Lead and workflows            	|     Coordination, deadlines, task tracking, final integration                 	|
+|     Samuel Visinde    	|     Product & Conversation Designer      	|     Chatbot questions, responses, user journeys and   conversation logic      	|
+|     Regina Kerubo    	|     Technical Developer                  	|     Chatbot implementation, logic and integrations                            	|
+|     Abdurohman Worku    	|     QA & Testing Lead                    	|     Test cases, bug identification, validation and evidence                   	|
+|     Marrion Branham    	|     project Lead    	|     Go-live note, project evidence, presentation and final   documentation    	|
 
 
 Although every member has a primary role, everyone is expected to contribute to the actual project work. No member should only observe or wait for others to complete the project.

@@ -1,7 +1,7 @@
 NORTHSTAR RETAIL CO.
 SUPPORT DEFLECTION MVP — PROJECT BOARD
 Sprint Duration: Wednesday–Saturday
-Final Deadline: Saturday, 11:59 AM
+Final Deadline: Saturday, 11:59 PM
 Product: Support Deflection Chatbot
 Target Categories: Order Status + Returns & Refunds
 ________________________________________

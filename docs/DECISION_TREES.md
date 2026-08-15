@@ -20,4 +20,24 @@ These decision trees are the implementation-ready workflow reference for the Nor
 - **Yes** → Eligible for Full Refund → Provide free prepaid return label
 - **No** → Standard Return Closed → May qualify for store credit upon review
 
+- 
+- ## Handoff
+
+These decision trees translate the Northstar Retail support requirements into implementation-ready workflow logic.
+
+### Order Status
+- Check whether an Order ID is available.
+- If present, look up the order status.
+- If missing, request the Order ID.
+- Return the appropriate customer-facing response.
+
+### Returns & Refunds
+- Check whether the purchase falls within the return window.
+- If eligible, proceed with the refund/return path.
+- If outside the window, close the standard return path or route for review.
+- Return the appropriate customer-facing response.
+
+### Next Team Step
+Use these flows as the reference when implementing the corresponding HTML/JavaScript interactions and testing the support workflow.
+
 

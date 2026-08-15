@@ -1,7 +1,7 @@
-NORTHSTAR CO.
+NORTHSTAR CHARTER.
 SUPPORT DEFLECTION MVP TEAM CHARTER
 Sprint: Wednesday–Saturday
-Final Deadline: Saturday, 11:59 EAT
+Final Deadline: Saturday, 11:59 PM
 Team Size: 5 Members
 Product: Customer Support Deflection Chatbot
 Target Ticket Types: Order Status + Returns & Refunds
@@ -130,7 +130,7 @@ Morning
 •	Final audit-trail check.
 •	Final presentation/demo rehearsal.
 Hard Deadline
-Saturday — 11:59 EAT
+Saturday — 11:59 PM
 No major new features should be introduced after the final testing phase unless required to fix a critical failure.
 ________________________________________
 7. Definition of "Done" for the Sprint
@@ -218,5 +218,5 @@ By signing below, each member confirms that they understand and agree to the tea
 
 Team Approval: ______________________________
 Date: ______________________________
-Final Sprint Deadline: Saturday, 11:59 EAT
+Final Sprint Deadline: Saturday, 11:59 PM
 

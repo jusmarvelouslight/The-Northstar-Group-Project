@@ -1,0 +1,11 @@
+{
+"name": "northstar-support-portal",
+"version": "1.0.0",
+"private": true,
+"description": "Northstar Clothing Co. customer support portal MVP",
+"type": "module",
+"scripts": {
+"dev": "vercel dev",
+"start": "vercel dev"
+}
+}

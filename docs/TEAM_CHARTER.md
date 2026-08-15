@@ -27,7 +27,7 @@ ________________________________________
    
 |      Member     	|      Primary Role                        	|      Key Responsibility                                                       	|
 |-----------------	|------------------------------------------	|-------------------------------------------------------------------------------	|
-|     Angela Wainaina    	|     Scrum Lead and workflows            	|     Creation of the decision tree, deadlines, task tracking, final integration                 	|
+|     Angela Wainaina    	|     Support logic & workflow design            	|     Process Mapping and Logic,creating the workflow design                 	|
 |     Samuel Visinde    	|     Product & Conversation Designer      	|     Chatbot questions, responses, user journeys and   conversation logic      	|
 |     Regina Kerubo    	|     Technical Developer                  	|     Chatbot implementation, logic and integrations                            	|
 |     Abdurohman Worku    	|     QA & Testing Lead                    	|     Test cases, bug identification, validation and evidence                   	|

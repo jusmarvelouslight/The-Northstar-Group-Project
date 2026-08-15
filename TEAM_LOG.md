@@ -1,6 +1,6 @@
 | Date       | Team Member | Task                                           | Notes                                                                                      |
 |------------|-------------|------------------------------------------------|--------------------------------------------------------------------------------------------|
-| 2023-10-01 | Alex        | Classify + Route                              | Defined the classification logic for incoming messages; addressed payload mapping issues.  |
+| 2023-10-01 | Angela      | Classify + Route                              | Defined the classification logic for incoming messages; addressed payload mapping issues.  |
 | 2023-10-01 | Jordan      | Order Status Branch                           | Developed the core functionality for fetching order status with proper validations.       |
 | 2023-10-01 | Sam         | Return + Stock Branches                       | Created the return policy logic and stock availability checks, ensuring fallback data works.|
 | 2023-10-01 | Riley       | Out-of-Scope + Save Steps + GitHub Push + Documentation | Coordinated end-to-end flow and documented processes for future reference; special focus on escalation pathways. |

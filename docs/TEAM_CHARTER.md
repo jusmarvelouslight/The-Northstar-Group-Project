@@ -210,7 +210,7 @@ By signing below, each member confirms that they understand and agree to the tea
 |      Member     |      Name                 |      Role                              |      Signature            |      Date         |
 |-----------------|---------------------------|----------------------------------------|---------------------------|-------------------|
 |     1           |     _________Marrion Branham_________    |     Project Lead                       |     _________M.B_________    |     _____15th August,2026_____    |
-|     2           |     _________Samuel Viside_________    |     Product/Conversation Designer      |     _________S.V_________    |     _____15th August, 2026_____    |
+|     2           |     _________Samuel Visinde_________    |     Product/Conversation Designer      |     _________S.V_________    |     _____15th August, 2026_____    |
 |     3           |     _________Regina Kerubo_________    |     Technical Developer                |     _________R.K_________    |     _____15th August, 2026_____    |
 |     4           |     _________Abdurohman Worku_________   |     QA & Testing Lead                  |     _________A.W_________    |     _____15th August,2026_____    |
 |     5           |     _________Angela Wainaina_________    |   Support logic & workflow design      |     _________A.W_________    |     _____15th August,2026_____    |

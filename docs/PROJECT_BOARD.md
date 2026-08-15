@@ -1,4 +1,4 @@
-NORTHSTAR RETAIL CO.
+NORTHSTAR.
 SUPPORT DEFLECTION MVP — PROJECT BOARD
 Sprint Duration: Wednesday–Saturday
 Final Deadline: Saturday, 11:59 PM
@@ -87,9 +87,9 @@ Must Finish
 •	T21 — Submission check
 •	T22 — Final submission
 Saturday Final Check
-11:30 AM: Internal submission deadline
-11:59 AM: Absolute project deadline
-The 11:30 AM internal deadline gives the team a 29-minute safety buffer.
+11:30 PM: Internal submission deadline
+11:59 PM: Absolute project deadline
+The 11:30 PM internal deadline gives the team a 29-minute safety buffer.
 ________________________________________
 DEFINITION OF DONE — MVP
 The Support Deflection Chatbot can only be marked DONE when:

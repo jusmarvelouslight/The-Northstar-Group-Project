@@ -1,25 +1,88 @@
-# Handoff Documentation
 
+# Northstar Support Portal — Handoff Documentation
+## Current MVP Status
+The Northstar Support Portal has been migrated from the original CrewAI-centered prototype to a lightweight web application architecture.
 ## What Works
-
-- All four branches of the chatbot run end-to-end, ensuring a reliable flow.
-- On-brand replies are generated on every path.
-- Full mock inventory is provided with detailed size-level information and restock dates.
-- A no-product fallback has been implemented for stock queries, enhancing user experience.
-- Missing order IDs are handled by a dedicated friendly prompt, improving customer interaction.
-- Classifier output is regularized to lowercase before routing, eliminating unnecessary errors.
-- The final reply is consistently saved to `state.final_reply` on every branch, ensuring reliable output.
-
-## What Is Still Rough
-
-- The mock data is hardcoded in agent backstories and requires actual API or database integration for production readiness.
-- There is no conversation memory across chatbot runs, limiting context retention.
-- Authentication or rate-limiting is not currently applied, potentially affecting the security and usage rates.
-- The chatbot currently writes replies to state but does not send them anywhere, such as through email or a chat widget.
-
-## What You Need to Know
-
-- The classifier agent drives all routing decisions, so it is important to test it thoroughly first if any behavior seems incorrect.
-- To update mock data, one can edit agent backstories directly in CrewAI Studio.
-- The platform’s default LLM is utilized throughout; thus, it is essential to retest the classifier if the organization changes its model.
-- Ensure that kickoff input field names are precisely as typed to avoid any issues with recognition.
+- Customer-facing support portal
+- Responsive navigation
+- Search interface
+- Order-status lookup
+- Returns and refunds workflow
+- Product availability lookup
+- General support assistant
+- Out-of-scope escalation
+- Input validation
+- NS-1005 order fixture
+- Mobile-responsive interface
+- Server-side API endpoint
+- Optional AI response enhancement
+- No API key exposed in frontend code
+## Architecture
+```text
+Browser
+ ↓
+index.html
+ ↓
+script.js
+ ↓
+POST /api/support
+ ↓
+api/support.js
+ ↓
+data/store.js
+ ↓
+Verified support result
+ ↓
+Optional OpenAI enhancement
+ ↓
+Customer response
+```
+## Why CrewAI Was Removed
+CrewAI was useful for the original flow prototype, but the MVP does not require a multi-agent orchestration framework.
+The support workflow currently has four predictable branches:
+1. Order Status
+2. Returns
+3. Stock
+4. Escalation
+A direct server-side router is easier to maintain and deploy for this scope.
+## AI Safety Principle
+The AI layer is not the source of truth.
+Verified Northstar data is passed to the model.
+The model is instructed not to invent:
+- orders
+- tracking numbers
+- stock
+- prices
+- delivery dates
+- refund eligibility
+- policies
+## Known MVP Limitations
+The current version still uses local data.
+Production integration should eventually connect the support API to:
+- order management
+- inventory management
+- customer accounts
+- a database
+- a helpdesk/ticket system
+- email
+- analytics
+## Environment VariablesRequired only for AI enhancement:
+```text
+OPENAI_API_KEY
+OPENAI_MODEL
+```
+The portal still has deterministic support functionality when the AI key is unavailable.
+## Deployment
+Recommended deployment platform:
+Vercel.
+The repository can be connected directly to Vercel.
+The `/api/support.js` file is deployed as a Vercel Function.
+## Next Production Priorities
+1. Connect real order data.
+2. Connect real inventory.
+3. Add authentication.
+4. Add rate limiting.
+5. Add persistent conversation history.
+6. Add human support ticket escalation.
+7. Add monitoring and analytics.
+8. Add automated end-to-end tests.

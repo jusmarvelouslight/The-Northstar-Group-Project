@@ -19,6 +19,222 @@
                 <sl-badge variant="neutral">Remote</sl-badge>
             </div>
         </div>
-        <sl-button variant="primary">Edit Profile</sl-button>
+        <sl-button variant="primary">Edit Profile            <!-- Header -->
+            <header class="bg-white shadow-xs sticky top-0 z-50">
+                <div class="lg:px-8 max-w-7xl mx-auto px-4 py-4 sm:px-6">
+                    <div class="flex items-center justify-between">
+                        <h1 class="font-light heading-2 text-2xl">NORTHSTAR CO</h1>
+                        <div class="flex gap-3">
+                            <sl-button variant="default" size="small" (click)="onButton2Click($event)">
+                                <sl-icon slot="prefix" name="bag"></sl-icon> Cart </sl-button>
+                            <sl-button variant="default" size="small" (click)="onButton3Click($event)">
+                                <sl-icon slot="prefix" name="person-circle"></sl-icon> Account </sl-button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- // Header -->
+            <!-- Hero Section -->
+            <main class="lg:px-8 max-w-7xl mx-auto px-4 py-12 sm:px-6">
+                <div>
+                    <h1>LUXURY REDEFINED</h1>
+                    <p>Haute Couture from Nairobi — Autumn/Winter 2026 Collection</p>
+                    <button (click)="onButton4Click($event)">EXPLORE COLLECTION</button>
+                </div>
+                <!-- Navigation -->
+                <div class="nav-header">
+                    <a>HOME</a>
+                    <a>SHOP</a>
+                    <a>AI CONCIERGE</a>
+                    <a>ABOUT</a>
+                </div>
+                <!-- // Navigation -->
+                <!-- Brand Story Section -->
+                <div>
+                    <h2>OUR STORY</h2>
+                    <div>
+                        <p>At NORTHSTAR CO, we craft luxury apparel that transcends ordinary fashion. Each piece from our atelier in Nairobi represents the pinnacle of haute couture—meticulously designed with Grade-A materials, artisanal techniques, and an unwavering commitment to elegance. From sumptuous cashmere to hand-woven artisanal pieces, we create clothing that speaks to the discerning individual.</p>
+                    </div>
+                    <div>
+                        <strong>Atelier Nairobi</strong> | Autumn/Winter 2026 Collection | Contact: northstarco79&#64;gmail.com </div>
+                </div>
+                <!-- // Brand Story Section -->
+                <!-- Featured Products Section -->
+                <h2 class="heading-5">FEATURED COLLECTION</h2>
+                <!-- // Featured Products Section -->
+                <div class="gap-8 grid grid-cols-1 lg:grid-cols-3 mb-12 md:grid-cols-2">
+                    <!-- Product 1: Sovereign Shearling Trench -->
+                    <div>
+                        <div>👗</div>
+                        <div>
+                            <div>Sovereign Shearling Trench</div>
+                            <div>NSJ001</div>
+                            <div>Jackets</div>
+                            <div>Italian Calf Leather & Tuscan Lambskin—the quintessential statement piece.</div>
+                            <div>$2,850</div>
+                            <div>IN STOCK</div>
+                            <div class="div-23">
+                                <sl-button variant="primary" size="small" (click)="onButton5Click($event)">ADD TO CART</sl-button>
+                                <sl-button class="button-6" variant="default" size="small" (click)="onButton6Click($event)">DETAILS</sl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Product 1: Sovereign Shearling Trench -->
+                    <!-- Product 2: Monarch Chunky Cable Sweater -->
+                    <div>
+                        <div>🧶</div>
+                        <div>
+                            <div>Monarch Chunky Cable Sweater</div>
+                            <div>NSS001</div>
+                            <div>Cashmere</div>
+                            <div>100% Grade-A Loro Piana Cashmere—luxury you can feel.</div>
+                            <div>$1,200</div>
+                            <div>IN STOCK</div>
+                            <div class="div-33">
+                                <sl-button variant="primary" size="small" (click)="onButton7Click($event)">ADD TO CART</sl-button>
+                                <sl-button class="button-8" variant="default" size="small" (click)="onButton8Click($event)">DETAILS</sl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Product 2: Monarch Chunky Cable Sweater -->
+                    <!-- Product 3: Aura Lounge Hoodie & Pants Set -->
+                    <div>
+                        <div>👔</div>
+                        <div>
+                            <div>Aura Lounge Hoodie & Pants Set</div>
+                            <div>NSC001</div>
+                            <div>Cashmere</div>
+                            <div>4-Ply Pure Mongolian Cashmere for ultimate comfort.</div>
+                            <div>$1,650</div>
+                            <div>IN STOCK</div>
+                            <div class="div-43">
+                                <sl-button variant="primary" size="small" (click)="onButton9Click($event)">ADD TO CART</sl-button>
+                                <sl-button class="button-10" variant="default" size="small" (click)="onButton10Click($event)">DETAILS</sl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4: Opulent Backless Gown -->
+                    <div>
+                        <div>✨</div>
+                        <div>
+                            <div>Opulent Backless Gown</div>
+                            <div>NSD001</div>
+                            <div>Evening Wear</div>
+                            <div>Heavyweight Mulberry Silk Crepe for timeless elegance.</div>
+                            <div>$2,200</div>
+                            <div>LIMITED</div>
+                            <div class="div-53">
+                                <sl-button variant="primary" size="small" (click)="onButton11Click($event)">ADD TO CART</sl-button>
+                                <sl-button class="button-12" variant="default" size="small" (click)="onButton12Click($event)">DETAILS</sl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Product 4: Opulent Backless Gown -->
+                    <!-- Product 5: Soleil Hand-Crochet Tunic -->
+                    <div>
+                        <div>🌿</div>
+                        <div>
+                            <div>Soleil Hand-Crochet Tunic</div>
+                            <div>NSW001</div>
+                            <div>Crochetwear</div>
+                            <div>Organic Cotton & Bamboo Yarn—artisanal craftsmanship.</div>
+                            <div>$890</div>
+                            <div>IN STOCK</div>
+                            <div class="div-63">
+                                <sl-button variant="primary" size="small" (click)="onButton13Click($event)">ADD TO CART</sl-button>
+                                <sl-button class="button-14" variant="default" size="small" (click)="onButton14Click($event)">DETAILS</sl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Product 5: Soleil Hand-Crochet Tunic -->
+                    <!-- Product 6: Premium Leather Accessories -->
+                    <div>
+                        <div>👜</div>
+                        <div>
+                            <div>Artisan Leather Tote</div>
+                            <div>NSA001</div>
+                            <div>Accessories</div>
+                            <div>Hand-crafted Italian leather—the perfect luxury companion.</div>
+                            <div>$950</div>
+                            <div>IN STOCK</div>
+                            <div class="div-73">
+                                <sl-button variant="primary" size="small" (click)="onButton15Click($event)">ADD TO CART</sl-button>
+                                <sl-button class="button-16" variant="default" size="small" (click)="onButton16Click($event)">DETAILS</sl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Product 6: Premium Leather Accessories -->
+                </div>
+                <!-- Shop All Section -->
+                <div class="div-74">
+                    <button (click)="onButton17Click($event)">SHOP ALL COLLECTIONS</button>
+                </div>
+                <!-- // Shop All Section -->
+                <!-- AI Concierge CTA -->
+                <div>
+                    <h2>PERSONAL STYLING ASSISTANT</h2>
+                    <div>
+                        <p>Discover our AI-powered Concierge service—your personal styling companion for real-time inventory queries, atelier assistance, and bespoke fashion guidance. Chat with us for curated recommendations and exclusive insights.</p>
+                    </div>
+                    <div class="div-77">
+                        <button (click)="onButton18Click($event)">START CHAT WITH CONCIERGE</button>
+                    </div>
+                </div>
+                <!-- // AI Concierge CTA -->
+                <!-- Legal & Policy Links -->
+                <div class="div-78">
+                    <h3>INFORMATION</h3>
+                    <div>
+                        <a>Terms & Conditions</a>
+                        <a>Privacy Policy</a>
+                        <a>Shipping & Returns</a>
+                        <a>Contact Atelier</a>
+                    </div>
+                </div>
+                <!-- // Legal & Policy Links -->
+            </main>
+            <!-- // Hero Section -->
+            <!-- Footer -->
+            <footer class="bg-white border-gray-200 border-t mt-16">
+                <div class="lg:px-8 max-w-7xl mx-auto px-4 py-12 sm:px-6">
+                    <div class="gap-8 grid grid-cols-1 mb-8 md:grid-cols-3">
+                        <div>
+                            <h3 class="font-semibold heading-8 text-lg">NORTHSTAR CO</h3>
+                            <p class="mt-2 text-gray-600">Luxury apparel & haute couture from Nairobi</p>
+                            <p class="mt-2 text-gray-500 text-sm">northstarco79&#64;gmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold heading-9 mb-3">QUICK LINKS</h4>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a class="hover:text-gray-900 text-gray-600">Shop</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-gray-900 text-gray-600">About</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-gray-900 text-gray-600">Concierge</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-gray-900 text-gray-600">Atelier Visit</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold heading-10 mb-3">FOLLOW US</h4>
+                            <div class="flex gap-4">
+                                <a class="hover:text-gray-900 text-gray-600">Instagram</a>
+                                <a class="hover:text-gray-900 text-gray-600">TikTok</a>
+                                <a class="hover:text-gray-900 text-gray-600">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t pt-6 text-center text-gray-600 text-sm">
+                        <p>© 2025 Northstar Co. All rights reserved. | Autumn/Winter 2026 Collection | Atelier Nairobi</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- // Footer -->
+        </sl-button>
     </div>
 </sl-card>

@@ -8,6 +8,7 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -15,9 +16,94 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   styleUrls: ['./user-profile.component.css'],
   templateUrl: './user-profile.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [CommonModule]
+  imports: [RouterLink, CommonModule]
 })
 export class UserProfileComponent {
 
   constructor() {}
+
+  protected onButton2Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Cart Click.');
+    $event.preventDefault();
+  }
+
+  protected onButton3Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Account Click.');
+    $event.preventDefault();
+  }
+
+  protected onButton4Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Shop Click.');
+    $event.preventDefault();
+  }
+
+  protected onButton5Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Add To Cart.');
+    $event.preventDefault();
+  }
+
+  protected onButton6Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle View Details.');
+    $event.preventDefault();
+  }
+
+  protected onButton7Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Add To Cart.');
+    $event.preventDefault();
+  }
+
+  protected onButton8Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle View Details.');
+    $event.preventDefault();
+  }
+
+  protected onButton9Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Add To Cart.');
+    $event.preventDefault();
+  }
+
+  protected onButton10Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle View Details.');
+    $event.preventDefault();
+  }
+
+  protected onButton11Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Add To Cart.');
+    $event.preventDefault();
+  }
+
+  protected onButton12Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle View Details.');
+    $event.preventDefault();
+  }
+
+  protected onButton13Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Add To Cart.');
+    $event.preventDefault();
+  }
+
+  protected onButton14Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle View Details.');
+    $event.preventDefault();
+  }
+
+  protected onButton15Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Add To Cart.');
+    $event.preventDefault();
+  }
+
+  protected onButton16Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle View Details.');
+    $event.preventDefault();
+  }
+
+  protected onButton17Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Shop All.');
+    $event.preventDefault();
+  }
+
+  protected onButton18Click($event: MouseEvent): void {
+    console.log('TODO: implement Handle Concierge.');
+    $event.preventDefault();
+  }
 }

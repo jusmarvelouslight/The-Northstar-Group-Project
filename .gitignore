@@ -17,3 +17,24 @@ npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 7. NEW data/store.js
+
+
+
+vercel.json:
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    }
+  ]
+}
+

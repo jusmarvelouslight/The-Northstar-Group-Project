@@ -1,187 +1,926 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Account — Self-Serve Dashboard | Northstar Co.</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #FBF7F0;
-    color: #1a1a1a;
-    line-height: 1.5;
-  }
-  header {
-    padding: 28px 60px;
-    border-bottom: 1px solid #e5ddd0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo { font-size: 22px; letter-spacing: 3px; font-weight: 700; }
-  .logo span { color: #b08d57; font-weight: 400; }
-  main { max-width: 900px; margin: 0 auto; padding: 60px 30px 100px; }
-  .eyebrow { letter-spacing: 2px; font-size: 12px; color: #8a8a8a; text-transform: uppercase; }
-  h1 { font-size: 56px; font-weight: 400; margin: 10px 0 40px; }
-  .tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid #e5ddd0; }
-  .tab-btn {
-    background: none; border: none; padding: 14px 20px; font-size: 15px;
-    cursor: pointer; color: #8a8a8a; border-bottom: 2px solid transparent;
-  }
-  .tab-btn.active { color: #1a1a1a; border-bottom: 2px solid #b08d57; }
-  .panel { display: none; }
-  .panel.active { display: block; }
-  .card {
-    background: #fff; border: 1px solid #e5ddd0; border-radius: 4px;
-    padding: 30px; margin-top: 10px;
-  }
-  label { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: #555; }
-  input, select {
-    width: 100%; padding: 12px 14px; border: 1px solid #d8cfbe; border-radius: 3px;
-    font-size: 15px; margin-bottom: 16px; background: #fff; font-family: inherit;
-  }
-  button.action {
-    background: #1a1a1a; color: #fff; border: none; padding: 12px 26px;
-    font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
-    cursor: pointer; border-radius: 3px;
-  }
-  button.action:hover { background: #333; }
-  .result { margin-top: 24px; padding: 18px; border-radius: 4px; font-size: 15px; display: none; }
-  .result.show { display: block; }
-  .result.success { background: #eef6ee; border: 1px solid #b9dcb9; }
-  .result.warn { background: #fdf3e6; border: 1px solid #eccd94; }
-  .result.error { background: #fbeaea; border: 1px solid #eab8b8; }
-  .result strong { display: block; margin-bottom: 6px; }
-  footer { text-align: center; padding: 30px; font-size: 12px; color: #aaa; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your Account — Self-Serve Dashboard | Northstar Co.</title>
+
+  <style>
+    /* ================================
+       GLOBAL RESET
+    ================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f7f2ec;
+      color: #3b3836;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ================================
+       HEADER
+    ================================= */
+
+    header {
+      padding: 24px 60px;
+      background: #fbf8f4;
+      border-bottom: 1px solid #e5ddd4;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+      letter-spacing: 4px;
+      font-weight: 700;
+      color: #800020;
+    }
+
+    .logo span {
+      color: #a98f7b;
+      font-weight: 400;
+    }
+
+    .portal-label {
+      font-size: 12px;
+      color: #918780;
+      letter-spacing: 0.5px;
+    }
+
+    /* ================================
+       MAIN CONTENT
+    ================================= */
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 30px 90px;
+    }
+
+    .eyebrow {
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: #9b8f87;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      font-weight: 300;
+      color: #800020;
+      margin: 0 0 45px;
+      letter-spacing: -1px;
+    }
+
+    /* ================================
+       TABS
+    ================================= */
+
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ded5cc;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+
+      padding: 14px 20px;
+
+      font-family: inherit;
+      font-size: 14px;
+
+      cursor: pointer;
+
+      color: #958b84;
+
+      border-bottom: 2px solid transparent;
+
+      white-space: nowrap;
+
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: #800020;
+    }
+
+    .tab-btn.active {
+      color: #800020;
+      border-bottom: 2px solid #800020;
+    }
+
+    /* ================================
+       PANELS
+    ================================= */
+
+    .panel {
+      display: none;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    /* ================================
+       DASHBOARD CARD
+    ================================= */
+
+    .card {
+      background: #ffffff;
+
+      border: 1px solid #e6ddd4;
+
+      border-radius: 14px;
+
+      padding: 34px;
+
+      margin-top: 10px;
+
+      box-shadow:
+        0 10px 30px rgba(70, 45, 35, 0.06);
+    }
+
+    /* ================================
+       LABELS
+    ================================= */
+
+    label {
+      display: block;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 9px;
+
+      color: #716963;
+
+      font-weight: 600;
+    }
+
+    /* ================================
+       INPUTS & SELECT
+    ================================= */
+
+    input,
+    select {
+      width: 100%;
+
+      padding: 14px 16px;
+
+      border: 1px solid #d8cec4;
+
+      border-radius: 7px;
+
+      font-family: inherit;
+
+      font-size: 15px;
+
+      margin-bottom: 18px;
+
+      background: #ffffff;
+
+      color: #3b3836;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input::placeholder {
+      color: #aaa19b;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #800020;
+
+      box-shadow:
+        0 0 0 3px rgba(128, 0, 32, 0.08);
+    }
+
+    /* ================================
+       ACTION BUTTON
+    ================================= */
+
+    button.action {
+      background: #800020;
+
+      color: #ffffff;
+
+      border: none;
+
+      padding: 14px 28px;
+
+      font-family: inherit;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      border-radius: 7px;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    button.action:hover {
+      background: #650019;
+
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 6px 15px rgba(128, 0, 32, 0.15);
+    }
+
+    button.action:active {
+      transform: translateY(0);
+    }
+
+    /* ================================
+       RESULT BOXES
+    ================================= */
+
+    .result {
+      margin-top: 24px;
+
+      padding: 18px 20px;
+
+      border-radius: 10px;
+
+      font-size: 15px;
+
+      display: none;
+    }
+
+    .result.show {
+      display: block;
+    }
+
+    .result.success {
+      background: #eef6ee;
+
+      border: 1px solid #c7dec7;
+
+      color: #356b3b;
+    }
+
+    .result.warn {
+      background: #fdf3e6;
+
+      border: 1px solid #e8cfaa;
+
+      color: #785a28;
+    }
+
+    .result.error {
+      background: #f9eaea;
+
+      border: 1px solid #e4bcbc;
+
+      color: #8b3030;
+    }
+
+    .result strong {
+      display: block;
+
+      margin-bottom: 6px;
+    }
+
+    .result a {
+      color: #800020;
+
+      font-weight: 600;
+    }
+
+    /* ================================
+       FOOTER
+    ================================= */
+
+    footer {
+      text-align: center;
+
+      padding: 35px 20px;
+
+      font-size: 11px;
+
+      letter-spacing: 0.5px;
+
+      color: #9c938d;
+    }
+
+    /* ================================
+       TABLET
+    ================================= */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 20px 24px;
+      }
+
+      .logo {
+        font-size: 17px;
+        letter-spacing: 3px;
+      }
+
+      .portal-label {
+        font-size: 10px;
+      }
+
+      main {
+        padding: 50px 20px 70px;
+      }
+
+      h1 {
+        font-size: 44px;
+
+        margin-bottom: 35px;
+      }
+
+      .tabs {
+        gap: 0;
+      }
+
+      .tab-btn {
+        padding: 12px 14px;
+
+        font-size: 13px;
+      }
+
+      .card {
+        padding: 25px 20px;
+
+        border-radius: 13px;
+      }
+
+      button.action {
+        width: 100%;
+      }
+    }
+
+    /* ================================
+       SMALL PHONES
+    ================================= */
+
+    @media (max-width: 420px) {
+
+      header {
+        padding: 18px 18px;
+      }
+
+      .logo {
+        font-size: 15px;
+        letter-spacing: 2.5px;
+      }
+
+      .portal-label {
+        display: none;
+      }
+
+      main {
+        padding: 42px 16px 60px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+      }
+
+      h1 {
+        font-size: 36px;
+
+        margin-bottom: 30px;
+      }
+
+      .tab-btn {
+        padding: 11px 10px;
+
+        font-size: 12px;
+      }
+
+      .card {
+        padding: 22px 16px;
+      }
+
+      input,
+      select {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
+
+
 <body>
 
-<header>
-  <div class="logo">NORTHSTAR <span>CO.</span></div>
-  <div style="font-size:13px; color:#8a8a8a;">Client Self-Serve Portal</div>
-</header>
+  <!-- ================================
+       HEADER
+  ================================= -->
 
-<main>
-  <div class="eyebrow">Northstar / Client Account</div>
-  <h1>Your dashboard.</h1>
+  <header>
 
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="order">Order Status</button>
-    <button class="tab-btn" data-tab="return">Return Eligibility</button>
-    <button class="tab-btn" data-tab="stock">Stock Availability</button>
-  </div>
-
-  <!-- ORDER STATUS -->
-  <div class="panel active" id="order">
-    <div class="card">
-      <label for="order-id">Order ID</label>
-      <input type="text" id="order-id" placeholder="e.g. NS-1042">
-      <button class="action" onclick="checkOrder()">Check Status</button>
-      <div class="result" id="order-result"></div>
+    <div class="logo">
+      NORTHSTAR <span>CO.</span>
     </div>
-  </div>
 
-  <!-- RETURN ELIGIBILITY -->
-  <div class="panel" id="return">
-    <div class="card">
-      <label for="return-window">Was it delivered within the last 30 days?</label>
-      <select id="return-window">
-        <option value="true">Yes, within 30 days</option>
-        <option value="false">No, more than 30 days ago</option>
-      </select>
-      <button class="action" onclick="checkReturn()">Check Eligibility</button>
-      <div class="result" id="return-result"></div>
+    <div class="portal-label">
+      Client Self-Serve Portal
     </div>
-  </div>
 
-  <!-- STOCK AVAILABILITY -->
-  <div class="panel" id="stock">
-    <div class="card">
-      <label for="stock-query">Product Name</label>
-      <input type="text" id="stock-query" placeholder="e.g. Sovereign Shearling Trench">
-      <button class="action" onclick="checkStock()">Check Availability</button>
-      <div class="result" id="stock-result"></div>
+  </header>
+
+
+  <!-- ================================
+       MAIN DASHBOARD
+  ================================= -->
+
+  <main>
+
+    <div class="eyebrow">
+      Northstar / Client Account
     </div>
-  </div>
-</main>
 
-<footer>Northstar Co. — Self-Serve Support Dashboard (MVP)</footer>
+    <h1>
+      Your dashboard.
+    </h1>
 
-<script>
-// ---- Tab switching ----
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
 
-function showResult(id, type, title, body) {
-  const el = document.getElementById(id);
-  el.className = "result show " + type;
-  el.innerHTML = "<strong>" + title + "</strong>" + body;
-}
+    <!-- ================================
+         TABS
+    ================================= -->
 
-// ---- Live backend wiring (api/support.js) ----
-const API_ENDPOINT = "/api/support";
+    <div class="tabs">
 
-async function callSupportAPI(payload) {
-  const response = await fetch(API_ENDPOINT, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  });
-  return response.json();
-}
+      <button
+        class="tab-btn active"
+        data-tab="order">
+        Order Status
+      </button>
 
-async function checkOrder() {
-  const orderId = document.getElementById('order-id').value.trim();
-  if (!orderId) {
-    showResult('order-result', 'error', 'Enter an Order ID', 'Please type an Order ID to check.');
-    return;
-  }
-  try {
-    const data = await callSupportAPI({ orderId });
-    if (!data.success) throw new Error(data.error || "Unknown error");
-    const type = data.order ? 'success' : 'error';
-    showResult('order-result', type, data.order ? data.order.status : 'Not found', data.reply);
-  } catch (err) {
-    showResult('order-result', 'error', 'Something went wrong', "Couldn't reach support right now. Please try again shortly.");
-  }
-}
+      <button
+        class="tab-btn"
+        data-tab="return">
+        Return Eligibility
+      </button>
 
-async function checkReturn() {
-  const within30Days = document.getElementById('return-window').value === "true";
-  try {
-    const data = await callSupportAPI({ within30Days });
-    if (!data.success) throw new Error(data.error || "Unknown error");
-    const type = data.eligible ? 'success' : 'error';
-    showResult('return-result', type, data.eligible ? 'Eligible for return' : 'Not eligible', data.reply);
-  } catch (err) {
-    showResult('return-result', 'error', 'Something went wrong', "Couldn't reach support right now. Please try again shortly.");
-  }
-}
+      <button
+        class="tab-btn"
+        data-tab="stock">
+        Stock Availability
+      </button>
 
-async function checkStock() {
-  const productName = document.getElementById('stock-query').value.trim();
-  if (!productName) {
-    showResult('stock-result', 'error', 'Enter a product name', 'Please type a product name to check.');
-    return;
-  }
-  try {
-    const data = await callSupportAPI({ productName });
-    if (!data.success) throw new Error(data.error || "Unknown error");
-    const type = data.product ? 'success' : 'warn';
-    showResult('stock-result', type, data.product ? data.product.name : 'Product list', data.reply);
-  } catch (err) {
-    showResult('stock-result', 'error', 'Something went wrong', "Couldn't reach support right now. Please try again shortly.");
-  }
-}
-</script>
+    </div>
+
+
+    <!-- ================================
+         ORDER STATUS
+    ================================= -->
+
+    <div
+      class="panel active"
+      id="order">
+
+      <div class="card">
+
+        <label for="order-id">
+          Order ID
+        </label>
+
+        <input
+          type="text"
+          id="order-id"
+          placeholder="e.g. NS-1042">
+
+        <button
+          class="action"
+          onclick="checkOrder()">
+          Check Status
+        </button>
+
+        <div
+          class="result"
+          id="order-result">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================
+         RETURN ELIGIBILITY
+    ================================= -->
+
+    <div
+      class="panel"
+      id="return">
+
+      <div class="card">
+
+        <label for="return-window">
+          Was it delivered within the last 30 days?
+        </label>
+
+        <select id="return-window">
+
+          <option value="true">
+            Yes, within 30 days
+          </option>
+
+          <option value="false">
+            No, more than 30 days ago
+          </option>
+
+        </select>
+
+        <button
+          class="action"
+          onclick="checkReturn()">
+          Check Eligibility
+        </button>
+
+        <div
+          class="result"
+          id="return-result">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================
+         STOCK AVAILABILITY
+    ================================= -->
+
+    <div
+      class="panel"
+      id="stock">
+
+      <div class="card">
+
+        <label for="stock-query">
+          Product Name
+        </label>
+
+        <input
+          type="text"
+          id="stock-query"
+          placeholder="e.g. Sovereign Shearling Trench">
+
+        <button
+          class="action"
+          onclick="checkStock()">
+          Check Availability
+        </button>
+
+        <div
+          class="result"
+          id="stock-result">
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
+  <footer>
+    Northstar Co. — Self-Serve Support Dashboard (MVP)
+  </footer>
+
+
+  <!-- ================================
+       JAVASCRIPT
+  ================================= -->
+
+  <script>
+
+    /* =================================
+       TAB SWITCHING
+    ================================= */
+
+    document
+      .querySelectorAll('.tab-btn')
+      .forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+          document
+            .querySelectorAll('.tab-btn')
+            .forEach(b => {
+              b.classList.remove('active');
+            });
+
+          document
+            .querySelectorAll('.panel')
+            .forEach(p => {
+              p.classList.remove('active');
+            });
+
+          btn.classList.add('active');
+
+          document
+            .getElementById(btn.dataset.tab)
+            .classList.add('active');
+
+        });
+
+      });
+
+
+    /* =================================
+       RESULT DISPLAY
+    ================================= */
+
+    function showResult(id, type, title, body) {
+
+      const el = document.getElementById(id);
+
+      el.className = "result show " + type;
+
+      el.innerHTML =
+        "<strong>" +
+        title +
+        "</strong>" +
+        body;
+
+    }
+
+
+    /* =================================
+       BACKEND CONNECTION
+       /api/support
+    ================================= */
+
+    const API_ENDPOINT = "/api/support";
+
+
+    async function callSupportAPI(payload) {
+
+      const response = await fetch(
+        API_ENDPOINT,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify(payload)
+        }
+      );
+
+      return response.json();
+
+    }
+
+
+    /* =================================
+       ORDER STATUS
+    ================================= */
+
+    async function checkOrder() {
+
+      const orderId =
+        document
+          .getElementById('order-id')
+          .value
+          .trim();
+
+      if (!orderId) {
+
+        showResult(
+          'order-result',
+          'error',
+          'Enter an Order ID',
+          'Please type an Order ID to check.'
+        );
+
+        return;
+      }
+
+
+      try {
+
+        const data =
+          await callSupportAPI({
+            orderId
+          });
+
+
+        if (!data.success) {
+          throw new Error(
+            data.error || "Unknown error"
+          );
+        }
+
+
+        const type =
+          data.order
+            ? 'success'
+            : 'error';
+
+
+        showResult(
+          'order-result',
+          type,
+          data.order
+            ? data.order.status
+            : 'Not found',
+          data.reply
+        );
+
+      }
+
+
+      catch (err) {
+
+        showResult(
+          'order-result',
+          'error',
+          'Something went wrong',
+          "Couldn't reach support right now. Please try again shortly."
+        );
+
+      }
+
+    }
+
+
+    /* =================================
+       RETURN ELIGIBILITY
+    ================================= */
+
+    async function checkReturn() {
+
+      const within30Days =
+        document
+          .getElementById('return-window')
+          .value === "true";
+
+
+      try {
+
+        const data =
+          await callSupportAPI({
+            within30Days
+          });
+
+
+        if (!data.success) {
+          throw new Error(
+            data.error || "Unknown error"
+          );
+        }
+
+
+        const type =
+          data.eligible
+            ? 'success'
+            : 'error';
+
+
+        showResult(
+          'return-result',
+          type,
+          data.eligible
+            ? 'Eligible for return'
+            : 'Not eligible',
+          data.reply
+        );
+
+      }
+
+
+      catch (err) {
+
+        showResult(
+          'return-result',
+          'error',
+          'Something went wrong',
+          "Couldn't reach support right now. Please try again shortly."
+        );
+
+      }
+
+    }
+
+
+    /* =================================
+       STOCK AVAILABILITY
+    ================================= */
+
+    async function checkStock() {
+
+      const productName =
+        document
+          .getElementById('stock-query')
+          .value
+          .trim();
+
+
+      if (!productName) {
+
+        showResult(
+          'stock-result',
+          'error',
+          'Enter a product name',
+          'Please type a product name to check.'
+        );
+
+        return;
+      }
+
+
+      try {
+
+        const data =
+          await callSupportAPI({
+            productName
+          });
+
+
+        if (!data.success) {
+          throw new Error(
+            data.error || "Unknown error"
+          );
+        }
+
+
+        const type =
+          data.product
+            ? 'success'
+            : 'warn';
+
+
+        showResult(
+          'stock-result',
+          type,
+          data.product
+            ? data.product.name
+            : 'Product list',
+          data.reply
+        );
+
+      }
+
+
+      catch (err) {
+
+        showResult(
+          'stock-result',
+          'error',
+          'Something went wrong',
+          "Couldn't reach support right now. Please try again shortly."
+        );
+
+      }
+
+    }
+
+  </script>
 
 </body>
+
 </html>
+
+

@@ -3,7 +3,7 @@
 * lock-in.
 * Upgrade to a Pro plan to remove this header, see https://www.jitblox.com/plans for more.
 * 
-* Check out this JitBlox project, Northstar, at https://www.jitblox.com/project/H8pRwCIqwN/northstar
+* Check out this JitBlox project, Northstar, at https://www.jitblox.com/project/kxYI0irslt/northstar
 */
 
 import { bootstrapApplication } from '@angular/platform-browser';

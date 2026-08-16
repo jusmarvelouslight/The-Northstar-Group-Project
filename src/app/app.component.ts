@@ -3,83 +3,63 @@
 * lock-in.
 * Upgrade to a Pro plan to remove this header, see https://www.jitblox.com/plans for more.
 * 
-* Check out this JitBlox project, Northstar co, at null
+* Check out this JitBlox project, Northstar, at https://www.jitblox.com/project/H8pRwCIqwN/northstar
 */
 
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgbCollapse, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserProfileComponent } from './components/Components/user-profile.component';
 
 @Component({
   selector: 'app-root',
   host: { 'class': 'jbx-root' },
   styleUrls: ['./app.component.css'],
   templateUrl: './app.component.html',
-  imports: [RouterLink, NgbCollapseModule, CommonModule]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [UserProfileComponent, RouterLink, CommonModule]
 })
 export class AppComponent {
-  @ViewChild('collapseNavbarNav') protected collapseNavbarNav!: NgbCollapse;
 
   constructor() {}
 
-  protected onButton1Click($event: MouseEvent): void {
-    this.collapseNavbarNav.toggle();
+  protected onButton5Click($event: MouseEvent): void {
+    alert('AI Concierge Coming Soon');
     $event.preventDefault();
   }
 
-  protected onButton2Click($event: MouseEvent): void {
-    alert('Cart opened');
+  protected onButton6Click($event: MouseEvent): void {
+    alert('Product Detail Page - Coming Soon');
     $event.preventDefault();
   }
 
-  protected onButton4Click($event: MouseEvent): void {
-    alert('Shopping cart opened');
+  protected onButton7Click($event: MouseEvent): void {
+    alert('Product Detail Page - Coming Soon');
     $event.preventDefault();
   }
 
-  protected onDiv66Click($event: MouseEvent): void {
-    alert('Viewing Statement Jackets category');
+  protected onButton8Click($event: MouseEvent): void {
+    alert('Product Detail Page - Coming Soon');
     $event.preventDefault();
   }
 
-  protected onDiv70Click($event: MouseEvent): void {
-    alert('Viewing Cashmere Sets category');
+  protected onButton9Click($event: MouseEvent): void {
+    alert('Product Detail Page - Coming Soon');
     $event.preventDefault();
   }
 
-  protected onDiv74Click($event: MouseEvent): void {
-    alert('Viewing Artisanal Crochetwear category');
+  protected onButton10Click($event: MouseEvent): void {
+    alert('Product Detail Page - Coming Soon');
     $event.preventDefault();
   }
 
-  protected onDiv78Click($event: MouseEvent): void {
-    alert('Viewing Accessories category');
+  protected onButton11Click($event: MouseEvent): void {
+    alert('Full Catalog - Coming Soon');
     $event.preventDefault();
   }
 
-  protected onHyperlink26Click($event: MouseEvent): void {
-    alert('Contact information');
-    $event.preventDefault();
-  }
-
-  protected onDiv153Click($event: MouseEvent): void {
-    alert('Jackets category opened');
-    $event.preventDefault();
-  }
-
-  protected onDiv157Click($event: MouseEvent): void {
-    alert('Cashmere category opened');
-    $event.preventDefault();
-  }
-
-  protected onDiv161Click($event: MouseEvent): void {
-    alert('Crochetwear category opened');
-    $event.preventDefault();
-  }
-
-  protected onDiv165Click($event: MouseEvent): void {
-    alert('Accessories category opened');
+  protected onButton12Click($event: MouseEvent): void {
+    alert('Chat Interface Coming Soon');
     $event.preventDefault();
   }
 }

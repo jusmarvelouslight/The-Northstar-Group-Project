@@ -52,11 +52,15 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.*",
+                "input": "node_modules/@shoelace-style/shoelace/dist",
+                "output": "/assets/shoelace"
               }
             ],
             "styles": [
-              "bootstrap-icons/font/bootstrap-icons.css",
-              "bootstrap/dist/css/bootstrap.min.css",
+              "@shoelace-style/shoelace/dist/themes/light.css",
               "src/styles.css"
             ]
           },

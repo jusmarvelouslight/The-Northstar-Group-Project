@@ -3,12 +3,15 @@
 * lock-in.
 * Upgrade to a Pro plan to remove this header, see https://www.jitblox.com/plans for more.
 * 
-* Check out this JitBlox project, Northstar co, at null
+* Check out this JitBlox project, Northstar, at https://www.jitblox.com/project/H8pRwCIqwN/northstar
 */
 
 import { bootstrapApplication } from '@angular/platform-browser';
+import { setBasePath } from '@shoelace-style/shoelace';
 import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
+
+setBasePath('/assets/shoelace');
 
 bootstrapApplication(AppComponent, appConfig)
   .catch(err => console.error(err));

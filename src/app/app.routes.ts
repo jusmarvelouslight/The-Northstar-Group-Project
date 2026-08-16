@@ -3,7 +3,7 @@
 * lock-in.
 * Upgrade to a Pro plan to remove this header, see https://www.jitblox.com/plans for more.
 * 
-* Check out this JitBlox project, Northstar co, at null
+* Check out this JitBlox project, Northstar, at https://www.jitblox.com/project/H8pRwCIqwN/northstar
 */
 
 import { Routes } from '@angular/router';

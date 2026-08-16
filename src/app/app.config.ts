@@ -3,19 +3,18 @@
 * lock-in.
 * Upgrade to a Pro plan to remove this header, see https://www.jitblox.com/plans for more.
 * 
-* Check out this JitBlox project, Northstar co, at null
+* Check out this JitBlox project, Northstar, at https://www.jitblox.com/project/H8pRwCIqwN/northstar
 */
 
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    importProvidersFrom(NgbCollapseModule, BrowserModule),
+    importProvidersFrom(BrowserModule),
     provideRouter(routes),
     provideHttpClient(),
   ]

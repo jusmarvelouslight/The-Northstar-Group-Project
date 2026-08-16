@@ -7,7 +7,7 @@ FastAPI, and Netlify. It accepts a customer free-text support message,
 classifies it, fetches live inventory data from Firebase, and sends an
 accurate reply to the customer via Gmail — fully automatically.
 
-Live deployment: https://teal-biscochitos-1eab1e.netlify.app
+Live deployment: https://northstarprojo.netlify.app
 
 What Works
 - Customer message classification (stock availability, return request,
@@ -109,7 +109,7 @@ records live (default: inventory) |
 | OPENAI_MODEL_NAME | Model to use (default: gpt-4o) |
 
 Deployment
-Platform: Netlify (https://teal-biscochitos-1eab1e.netlify.app). The repository
+Platform: Netlify (https://northstarprojo.netlify.app). The repository
 is connected to Netlify. api/index.py runs as a serverless function.
 netlify.toml configures the build and routing. Netlify auto-deploys on
 every push to the main branch. Add all environment variables in

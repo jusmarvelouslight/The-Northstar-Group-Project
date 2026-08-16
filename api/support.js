@@ -1,4 +1,4 @@
-import { store } from "../data/store.js";
+import { store } from "./data/store.js";
 
 const json = (data, status = 200) =>
   new Response(JSON.stringify(data), {

@@ -1,7 +1,7 @@
 NORTHSTAR.
 SUPPORT DEFLECTION MVP — PROJECT BOARD
 Sprint Duration: Wednesday–Saturday
-Final Deadline: Saturday, 11:59 PM
+Final Deadline: Sunday, 11:59 PM
 Product: Support Deflection Chatbot
 Target Categories: Order Status + Returns & Refunds.
 ________________________________________
@@ -86,7 +86,7 @@ Must Finish
 •	T20 — Demo rehearsal
 •	T21 — Submission check
 •	T22 — Final submission
-Saturday Final Check
+Sunday Final Check
 11:30 PM: Internal submission deadline
 11:59 PM: Absolute project deadline
 The 11:30 PM internal deadline gives the team a 29-minute safety buffer.
@@ -107,7 +107,7 @@ The Support Deflection Chatbot can only be marked DONE when:
 •	All five members have documented contributions.
 •	Final files are organized.
 •	The team has rehearsed the demonstration.
-•	Submission is completed before 11:59 AM Saturday.
+•	Submission is completed before 11:59 AM Sunday.
 ________________________________________
 AUDIT TRAIL REQUIREMENT
 Because Northstar's procurement office requires proof of genuine collaboration, the team will maintain a visible record of:

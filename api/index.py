@@ -8,8 +8,7 @@ app = FastAPI(title='Northstar Inventory Chatbot API', version='1.0.0')
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['http://localhost:3000', 'http://localhost:5173',
-'https://the-northstar-group-project.vercel.app'],
+    allow_origins=['http://localhost:3000', 'http://localhost:5173,
     allow_methods=['POST', 'GET'],
     allow_headers=['*'],
 )

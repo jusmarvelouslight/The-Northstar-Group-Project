@@ -86,8 +86,6 @@
   <!-- RETURN ELIGIBILITY -->
   <div class="panel" id="return">
     <div class="card">
-      <label for="return-order-id">Order ID</label>
-      <input type="text" id="return-order-id" placeholder="e.g. NS-1042">
       <label for="return-window">Was it delivered within the last 30 days?</label>
       <select id="return-window">
         <option value="true">Yes, within 30 days</option>
@@ -101,8 +99,8 @@
   <!-- STOCK AVAILABILITY -->
   <div class="panel" id="stock">
     <div class="card">
-      <label for="stock-query">Product Name or ID</label>
-      <input type="text" id="stock-query" placeholder="e.g. Sovereign Shearling Trench or NSJ001">
+      <label for="stock-query">Product Name</label>
+      <input type="text" id="stock-query" placeholder="e.g. Sovereign Shearling Trench">
       <button class="action" onclick="checkStock()">Check Availability</button>
       <div class="result" id="stock-result"></div>
     </div>
@@ -157,12 +155,7 @@ async function checkOrder() {
 }
 
 async function checkReturn() {
-  const orderId = document.getElementById('return-order-id').value.trim();
   const within30Days = document.getElementById('return-window').value === "true";
-  if (!orderId) {
-    showResult('return-result', 'error', 'Enter an Order ID', 'Please type an Order ID to check.');
-    return;
-  }
   try {
     const data = await callSupportAPI({ within30Days });
     if (!data.success) throw new Error(data.error || "Unknown error");

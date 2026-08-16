@@ -1,0 +1,89 @@
+.section-5 {
+    background: linear-gradient(135deg, var(--primary-dark-red) 0%, #5a0010 100%);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.heading-5 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.paragraph-4 {
+    font-size: 1.1rem;
+    color: var(--secondary-baby-blue);
+    margin-bottom: 30px;
+}
+
+.hyperlink-20 {
+    border-color: white;
+    color: white;
+}
+
+.paragraph-12 {
+    font-size: 0.95rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    margin-top: 40px;
+}
+
+.heading-12 {
+    margin-bottom: 50px;
+}
+
+.section-10 {
+    background-color: white;
+    padding: 80px 20px;
+}
+
+.heading-13 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-dark-red);
+    margin-bottom: 20px;
+}
+
+.paragraph-13 {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.paragraph-14 {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.div-172 {
+    background: linear-gradient(135deg, var(--secondary-baby-blue), var(--bg-almond-beige));
+    border-radius: 12px;
+    text-align: center;
+    padding: 100px;
+}
+
+.icon-27 {
+    font-size: 4rem;
+    color: var(--primary-dark-red);
+}
+
+.paragraph-15 {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.paragraph-16 {
+    color: #CCCCCC;
+    margin-bottom: 10px;
+}
+
+.paragraph-17 {
+    color: #CCCCCC;
+    margin-bottom: 10px;
+}
+
+.paragraph-18 {
+    color: #CCCCCC;
+}

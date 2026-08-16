@@ -95,7 +95,7 @@ email received |
 Netlify Deployment Tests
 | ID | Test | Expected Result |
 |---|---|---|
-| TD-01 | GET https://teal-biscochitos-1eab1e.netlify.app | Home / chat page loads |
+| TD-01 | GET https://northstarprojo.netlify.app | Home / chat page loads |
 | TD-02 | GET /dashboard | Dashboard page loads |
 | TD-03 | GET /returns | Returns & Refunds page loads |
 | TD-04 | GET /contact | Contact Us page loads |

@@ -1,6 +1,5 @@
 The Northstar Group Project
 
-Overview
 This is the backend API for the Northstar Clothing Co. inventory
 chatbot. It is built with FastAPI and deployed as a serverless
 function on Vercel. It connects to a Firebase Realtime Database for

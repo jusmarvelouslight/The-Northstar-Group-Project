@@ -11,7 +11,7 @@ Test Summary
 | Support Branches | 4 |
 | Product Categories | 6 |
 | Products in Catalog | 25 |
-| Live Deployment | https://teal-biscochitos-1eab1e.netlify.app |
+| Live Deployment | https://northstarprojo.netlify.app |
 
 ---
 
